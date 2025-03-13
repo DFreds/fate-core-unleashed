@@ -1,3 +1,5 @@
+import { addStaminaToHeader } from "../ui/add-stamina-to-header.ts";
+import { addRollInputIconToExtra } from "../ui/add-roll-input-icon-to-extra.ts";
 import { Listener } from "./index.ts";
 
 const RenderCharacterSheet: Listener = {
@@ -8,18 +10,8 @@ const RenderCharacterSheet: Listener = {
                 const actorSheet = sheet as ActorSheet<Actor>;
                 const $html = html as JQuery<HTMLElement>;
 
-                const $fatePoints = $html.find(
-                    ".fatex-header .fatex-header__fate-points",
-                );
-
-                if ($fatePoints.length > 0) {
-                    const staminaTemplate = await renderTemplate(
-                        "modules/fate-core-unleashed/templates/stamina-header.hbs",
-                        { actor: actorSheet.actor },
-                    );
-
-                    $fatePoints.after(staminaTemplate);
-                }
+                await addStaminaToHeader($html, actorSheet);
+                addRollInputIconToExtra($html, actorSheet);
             },
         );
     },

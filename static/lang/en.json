@@ -1,5 +1,9 @@
 {
     "FateCoreUnleashed": {
-        "Stamina": "Stamina"
+        "Stamina": "Stamina",
+        "Extra": {
+            "RollInput": "Roll Input",
+            "RollInputHelp": "Enter the roll input for the extra."
+        }
     }
 }

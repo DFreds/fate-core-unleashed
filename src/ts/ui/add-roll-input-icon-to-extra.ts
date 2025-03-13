@@ -42,30 +42,25 @@ function addRollInputIconToExtra(
                 const rollThrough = new Roll(rollInput);
                 const roll = await rollThrough.evaluate();
 
-                if (game.modules.get("dice-so-nice")?.active) {
-                    // @ts-expect-error doesn't think dice3d is defined
-                    await game.dice3d.showForRoll(roll, game.user, true);
-                }
+                const message = await roll.toMessage(
+                    {
+                        author: game.userId,
+                        speaker: ChatMessage.getSpeaker({
+                            actor: actorSheet.actor,
+                        }),
+                        flavor: description,
+                    },
+                    {
+                        create: false,
+                    },
+                );
 
-                // const chatContent = `/r ${rollInput}#<h2>${description}</h2>`;
-                // const roll = new Roll(rollInput);
-                // await roll.evaluate();
+                ChatMessage.applyRollMode(
+                    message,
+                    game.settings.get("core", "rollMode"),
+                );
 
-                // const m = await Macro.create({
-                //     name: "Roll Input",
-                //     command: chatContent,
-                //     type: "chat",
-                //     img: "systems/fate-core-unleashed/assets/fatex-logo.png",
-                // });
-
-                // m?.execute();
-                // await m?.delete();
-
-                // await ChatMessage.create({
-                //     author: game.userId,
-                //     content: description,
-                //     rolls: [roll.toJSON()],
-                // });
+                await ChatMessage.create(message);
             });
         });
 }

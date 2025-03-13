@@ -1,0 +1,23 @@
+<div class="fatex-header__fate-points">
+    <label class="fatex-header__label fatex-header__label--center" for="name">
+        {{localize "FateCoreUnleashed.Stamina"}}
+    </label>
+
+    <div class="fatex-header__fate-points-wrapper">
+        <input
+            class="fatex-text-input fatex-text-input--fp"
+            name="system.stamina.current"
+            type="text"
+            value="{{actor.system.stamina.current}}"
+        />
+
+        <span class="fatex-header__fatepoint-divider"> / </span>
+
+        <input
+            class="fatex-text-input fatex-text-input--fp"
+            name="system.stamina.refresh"
+            type="text"
+            value="{{actor.system.stamina.refresh}}"
+        />
+    </div>
+</div>

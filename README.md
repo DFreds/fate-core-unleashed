@@ -1,10 +1,10 @@
 <div align="center">
   <img src="https://i.imgur.com/gOZy3Jf.png" width="200" height="200"/>
 </div>
-<h1 align="center">DFreds Module Template TS</h1>
+<h1 align="center">Fate Core Unleashed</h1>
 
 <h4 align="center">
-  <a href="https://github.com/new?template_name=dfreds-module-template-ts&template_owner=DFreds">Use Template</a>
+  <a href="https://github.com/new?template_name=fate-core-unleashed&template_owner=DFreds">Use Template</a>
   ·
   <a href="https://discord.gg/Wq8AEV9bWb">Discord</a>
   ·
@@ -12,12 +12,12 @@
 </h4>
 
 <p align="center">
-    <a href="https://github.com/DFreds/dfreds-module-template-ts/pulse"><img src="https://img.shields.io/github/last-commit/DFreds/dfreds-module-template-ts?style=for-the-badge&logo=github&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/></a>
-    <a href="https://github.com/DFreds/dfreds-module-template-ts/releases/latest"><img src="https://img.shields.io/github/v/release/DFreds/dfreds-module-template-ts?style=for-the-badge&logo=gitbook&color=8bd5ca&logoColor=D9E0EE&labelColor=302D41"/></a>
-    <a href="https://github.com/DFreds/dfreds-module-template-ts/stargazers"><img src="https://img.shields.io/github/stars/DFreds/dfreds-module-template-ts?style=for-the-badge&logo=apachespark&color=eed49f&logoColor=D9E0EE&labelColor=302D41"/></a>
+    <a href="https://github.com/DFreds/fate-core-unleashed/pulse"><img src="https://img.shields.io/github/last-commit/DFreds/fate-core-unleashed?style=for-the-badge&logo=github&color=7dc4e4&logoColor=D9E0EE&labelColor=302D41"/></a>
+    <a href="https://github.com/DFreds/fate-core-unleashed/releases/latest"><img src="https://img.shields.io/github/v/release/DFreds/fate-core-unleashed?style=for-the-badge&logo=gitbook&color=8bd5ca&logoColor=D9E0EE&labelColor=302D41"/></a>
+    <a href="https://github.com/DFreds/fate-core-unleashed/stargazers"><img src="https://img.shields.io/github/stars/DFreds/fate-core-unleashed?style=for-the-badge&logo=apachespark&color=eed49f&logoColor=D9E0EE&labelColor=302D41"/></a>
     <br/>
     <br/>
-    <img src="https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/DFreds/dfreds-module-template-ts/main/static/module.json&label=Foundry%20Version&query=$.compatibility.verified&colorB=fe6a1f&style=for-the-badge&logo=foundryvirtualtabletop">
+    <img src="https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/DFreds/fate-core-unleashed/main/static/module.json&label=Foundry%20Version&query=$.compatibility.verified&colorB=fe6a1f&style=for-the-badge&logo=foundryvirtualtabletop">
     <br/>
     <br/>
     <a href="https://www.patreon.com/dfreds"><img src="https://img.shields.io/badge/-Patreon-%23f96854?style=for-the-badge&logo=patreon"/></a>
@@ -28,7 +28,7 @@
 </p>
 
 <p align="center">
-    <b>DFreds Module Template TS</b> is a FoundryVTT module template that uses Typescript and Vite for development.
+    <b>Fate Core Unleashed</b> is a FoundryVTT module template that uses Typescript and Vite for development.
 </p>
 
 ## Features

@@ -7,7 +7,7 @@ import path from "path";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 
-const PACKAGE_ID = "modules/dfreds-module-template-ts";
+const PACKAGE_ID = "modules/fate-core-unleashed";
 const EN_JSON = JSON.parse(
     fs.readFileSync("./static/lang/en.json", { encoding: "utf-8" }),
 );
@@ -53,11 +53,11 @@ const config = Vite.defineConfig(({ command, mode }): Vite.UserConfig => {
         fs.writeFileSync("./index.html", `<h1>${message}</h1>\n`);
         if (!fs.existsSync("./styles")) fs.mkdirSync("./styles");
         fs.writeFileSync(
-            "./styles/dfreds-module-template-ts.css",
+            "./styles/fate-core-unleashed.css",
             `/** ${message} */\n`,
         );
         fs.writeFileSync(
-            "./dfreds-module-template-ts.mjs",
+            "./fate-core-unleashed.mjs",
             `/** ${message} */\n\nwindow.global = window;\nimport "./src/ts/module.ts";\n`,
         );
         fs.writeFileSync("./vendor.mjs", `/** ${message} */\n`);
@@ -65,7 +65,7 @@ const config = Vite.defineConfig(({ command, mode }): Vite.UserConfig => {
 
     return {
         base:
-            command === "build" ? "./" : `/modules/dfreds-module-template-ts/`,
+            command === "build" ? "./" : `/modules/fate-core-unleashed/`,
         publicDir: "static",
         define: {
             BUILD_MODE: JSON.stringify(buildMode),
@@ -78,7 +78,7 @@ const config = Vite.defineConfig(({ command, mode }): Vite.UserConfig => {
             minify: false,
             sourcemap: buildMode === "development",
             lib: {
-                name: "dfreds-module-template-ts",
+                name: "fate-core-unleashed",
                 entry: "src/ts/module.ts",
                 formats: ["es"],
                 fileName: "module",
@@ -87,10 +87,10 @@ const config = Vite.defineConfig(({ command, mode }): Vite.UserConfig => {
                 output: {
                     assetFileNames: ({ name }): string =>
                         name === "style.css"
-                            ? "styles/dfreds-module-template-ts.css"
+                            ? "styles/fate-core-unleashed.css"
                             : name ?? "",
                     chunkFileNames: "[name].mjs",
-                    entryFileNames: "dfreds-module-template-ts.mjs",
+                    entryFileNames: "fate-core-unleashed.mjs",
                     manualChunks: {
                         vendor: Object.keys(packageJSON.dependencies)
                             ? Object.keys(packageJSON.dependencies)
@@ -116,7 +116,7 @@ const config = Vite.defineConfig(({ command, mode }): Vite.UserConfig => {
             port: 30001,
             open: false,
             proxy: {
-                "^(?!/modules/dfreds-module-template-ts/)":
+                "^(?!/modules/fate-core-unleashed/)":
                     "http://localhost:30000/",
                 "/socket.io": {
                     target: "ws://localhost:30000",
@@ -160,7 +160,7 @@ function deleteLockFilePlugin(): Vite.Plugin {
             const outDir = outputOptions.dir ?? "";
             const lockFile = path.resolve(
                 outDir,
-                "dfreds-module-template-ts.lock",
+                "fate-core-unleashed.lock",
             );
             fs.rmSync(lockFile);
         },

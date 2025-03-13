@@ -5,7 +5,7 @@ interface Listener {
     listen(): void;
 }
 
-const HooksModule: Listener = {
+const HooksFateCoreUnleashed: Listener = {
     listen(): void {
         const listeners: Listener[] = [Init, Setup];
 
@@ -15,5 +15,5 @@ const HooksModule: Listener = {
     },
 };
 
-export { HooksModule };
+export { HooksFateCoreUnleashed };
 export type { Listener };

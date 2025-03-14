@@ -12,7 +12,12 @@ const FateXRollMagic: Listener = {
             const currentStamina = stamina.current as string;
             const currentStaminaValue = parseInt(currentStamina);
 
-            if (isNaN(currentStaminaValue) || currentStaminaValue <= 0) {
+            if (isNaN(currentStaminaValue)) {
+                return;
+            }
+
+            if (currentStaminaValue <= 0) {
+                ui.notifications.warn("You don't have any stamina left!");
                 return;
             }
 

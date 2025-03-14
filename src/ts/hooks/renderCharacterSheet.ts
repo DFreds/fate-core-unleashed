@@ -1,6 +1,7 @@
 import { addStaminaToHeader } from "../ui/add-stamina-to-header.ts";
 import { addRollIconToExtra } from "../ui/add-roll-icon-to-extra.ts";
 import { Listener } from "./index.ts";
+import { Settings } from "../settings.ts";
 
 const RenderCharacterSheet: Listener = {
     listen(): void {
@@ -10,8 +11,15 @@ const RenderCharacterSheet: Listener = {
                 const actorSheet = sheet as ActorSheet<Actor>;
                 const $html = html as JQuery<HTMLElement>;
 
-                await addStaminaToHeader($html, actorSheet);
+                const settings = new Settings();
+
+                if (settings.enableExtrasRolling) {
                     addRollIconToExtra($html, actorSheet);
+                }
+
+                if (settings.enableStamina) {
+                    await addStaminaToHeader($html, actorSheet);
+                }
             },
         );
     },

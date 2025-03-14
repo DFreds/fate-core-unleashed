@@ -1,4 +1,6 @@
 import { Listener } from "./index.ts";
+import { Settings } from "../settings.ts";
+import { addRollInputToExtrasSheet } from "../ui/add-roll-input-to-extras-sheet.ts";
 
 const RenderExtraSheet: Listener = {
     listen(): void {
@@ -8,17 +10,10 @@ const RenderExtraSheet: Listener = {
                 const itemSheet = sheet as ItemSheet<Item, any>;
                 const $html = html as JQuery<HTMLElement>;
 
-                const $descriptionLabel = $html.find(
-                    "label[for='system.shortDescription']",
-                );
+                const settings = new Settings();
 
-                if ($descriptionLabel.length > 0) {
-                    const rollInputTemplate = await renderTemplate(
-                        "modules/fate-core-unleashed/templates/extra-sheet-roll-input.hbs",
-                        { system: itemSheet.item.system },
-                    );
-
-                    $descriptionLabel.parent().after(rollInputTemplate);
+                if (settings.enableExtrasRolling) {
+                    await addRollInputToExtrasSheet($html, itemSheet);
                 }
             },
         );

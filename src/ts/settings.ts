@@ -1,27 +1,40 @@
-// import { MODULE_ID } from "./constants.ts";
+import { MODULE_ID } from "./constants.ts";
 
 class Settings {
     // Settings keys
-    // #SAMPLE = "sample";
+    #ENABLE_EXTRAS_ROLLING = "enableExtraRolling";
+    #ENABLE_STAMINA = "enableStamina";
 
     register(): void {
-        // game.settings.register(MODULE_ID, this.#SAMPLE, {
-        //     name: EN_JSON.ModuleTemplate.Settings.SampleSetting.Name,
-        //     hint: EN_JSON.ModuleTemplate.Settings.SampleSetting.Hint,
-        //     scope: "world",
-        //     config: true,
-        //     default: true,
-        //     type: Boolean,
-        // });
+        game.settings.register(MODULE_ID, this.#ENABLE_EXTRAS_ROLLING, {
+            name: EN_JSON.FateCoreUnleashed.Settings.EnableExtrasRolling.Name,
+            hint: EN_JSON.FateCoreUnleashed.Settings.EnableExtrasRolling.Hint,
+            scope: "world",
+            config: true,
+            default: true,
+            type: Boolean,
+        });
+
+        game.settings.register(MODULE_ID, this.#ENABLE_STAMINA, {
+            name: EN_JSON.FateCoreUnleashed.Settings.EnableStamina.Name,
+            hint: EN_JSON.FateCoreUnleashed.Settings.EnableStamina.Hint,
+            scope: "world",
+            config: true,
+            default: true,
+            type: Boolean,
+        });
     }
 
-    // get sample(): boolean {
-    //     return game.settings.get(MODULE_ID, this.#SAMPLE) as boolean;
-    // }
+    get enableExtrasRolling(): boolean {
+        return game.settings.get(
+            MODULE_ID,
+            this.#ENABLE_EXTRAS_ROLLING,
+        ) as boolean;
+    }
 
-    // async setSample(value: boolean): Promise<unknown> {
-    //     return game.settings.set(MODULE_ID, this.#SAMPLE, value);
-    // }
+    get enableStamina(): boolean {
+        return game.settings.get(MODULE_ID, this.#ENABLE_STAMINA) as boolean;
+    }
 }
 
 export { Settings };

@@ -4,6 +4,16 @@
         "Extra": {
             "RollInput": "Roll Input",
             "RollInputHelp": "Enter the roll input for the extra."
+        },
+        "Settings": {
+            "EnableStamina": {
+                "Name": "Enable Stamina",
+                "Hint": "If enabled, characters will have stamina added to their character sheet which auto decrements on a magic roll."
+            },
+            "EnableExtrasRolling": {
+                "Name": "Enable Extras Rolling",
+                "Hint": "If enabled, extras can be configured with a roll field, and characters will have a button to roll extras."
+            }
         }
     }
 }

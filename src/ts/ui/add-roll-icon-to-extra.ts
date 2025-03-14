@@ -1,4 +1,4 @@
-function addRollInputIconToExtra(
+function addRollIconToExtra(
     $html: JQuery<HTMLElement>,
     actorSheet: ActorSheet<Actor>,
 ): void {
@@ -65,4 +65,4 @@ function addRollInputIconToExtra(
         });
 }
 
-export { addRollInputIconToExtra };
+export { addRollIconToExtra };

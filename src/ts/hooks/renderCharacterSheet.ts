@@ -1,5 +1,5 @@
 import { addStaminaToHeader } from "../ui/add-stamina-to-header.ts";
-import { addRollInputIconToExtra } from "../ui/add-roll-input-icon-to-extra.ts";
+import { addRollIconToExtra } from "../ui/add-roll-icon-to-extra.ts";
 import { Listener } from "./index.ts";
 
 const RenderCharacterSheet: Listener = {
@@ -11,7 +11,7 @@ const RenderCharacterSheet: Listener = {
                 const $html = html as JQuery<HTMLElement>;
 
                 await addStaminaToHeader($html, actorSheet);
-                addRollInputIconToExtra($html, actorSheet);
+                    addRollIconToExtra($html, actorSheet);
             },
         );
     },

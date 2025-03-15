@@ -1,7 +1,7 @@
 {
     "name": "fate-core-unleashed",
     "version": "1.0.0",
-    "description": "A FoundryVTT module template using Typescript",
+    "description": "A FoundryVTT module that adds additional features to the FateX system",
     "private": true,
     "type": "module",
     "scripts": {
@@ -24,9 +24,7 @@
     },
     "author": "DFreds (https://github.com/DFreds)",
     "license": "MIT",
-    "dependencies": {
-        "uuid": "^10.0.0"
-    },
+    "dependencies": {},
     "devDependencies": {
         "@pixi/graphics-smooth": "^1.1.0",
         "@pixi/particle-emitter": "5.0.8",

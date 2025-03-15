@@ -4,7 +4,7 @@
 <h1 align="center">Fate Core Unleashed</h1>
 
 <h4 align="center">
-  <a href="https://github.com/new?template_name=fate-core-unleashed&template_owner=DFreds">Use Template</a>
+  <a href="https://foundryvtt.com/packages/fate-core-unleashed">Install</a>
   ·
   <a href="https://discord.gg/Wq8AEV9bWb">Discord</a>
   ·
@@ -18,6 +18,10 @@
     <br/>
     <br/>
     <img src="https://img.shields.io/badge/dynamic/json.svg?url=https://raw.githubusercontent.com/DFreds/fate-core-unleashed/main/static/module.json&label=Foundry%20Version&query=$.compatibility.verified&colorB=fe6a1f&style=for-the-badge&logo=foundryvirtualtabletop">
+    <a href="https://forge-vtt.com/bazaar#package=fate-core-unleashed"><img src="https://img.shields.io/badge/dynamic/json?label=Forge%20Installs&query=package.installs&suffix=%25&url=https://forge-vtt.com/api/bazaar/package/fate-core-unleashed&colorB=68a74f&style=for-the-badge&logo=condaforge"/></a>
+    <br/>
+    <img src="https://img.shields.io/github/downloads/DFreds/fate-core-unleashed/latest/fate-core-unleashed.zip?color=2b82fc&label=LATEST%20DOWNLOADS&style=for-the-badge">
+    <img src="https://img.shields.io/github/downloads/DFreds/fate-core-unleashed/total?color=2b82fc&label=TOTAL%20DOWNLOADS&style=for-the-badge">
     <br/>
     <br/>
     <a href="https://www.patreon.com/dfreds"><img src="https://img.shields.io/badge/-Patreon-%23f96854?style=for-the-badge&logo=patreon"/></a>
@@ -28,20 +32,25 @@
 </p>
 
 <p align="center">
-    <b>Fate Core Unleashed</b> is a FoundryVTT module template that uses Typescript and Vite for development.
+    <b>Fate Core Unleashed</b> is a FoundryVTT module that adds additional
+    features to the FateX system.
 </p>
 
 ## Features
 
-- Full use of well-defined types provided by [pf2e](https://foundryvtt.com/packages/pf2e)
-- Symlink integration, so you aren't directly messing with the foundry data folder
-- Use of [nvm](https://github.com/nvm-sh/nvm) and npm for node and package management
-- Use of [vite](https://vite.dev/) for building
-- Commands to build for production, staging, or development
-- Commands to configure and run different versions of FoundryVTT
-- Tools to automatically rename the name of the module, update the types, and enforce code linting
-- Powerful GitHub actions that handle releases and (optionally) posting updates to a Discord channel
+- Adds stamina management to character sheets
+- Automatically decrements stamina when performing configured "magic" rolls
+- Adds configurable roll expressions to Extra items (e.g. "4dF+2")
+- Adds one-click roll button to Extra items for quick access
 
-## Getting Started
+Stamina:
 
-### See the [documentation](https://www.dfreds-modules.com/developers/module-template-ts/) page for details.
+![Stamina](./docs/stamina-demo.gif)
+
+Extras rolling:
+
+![Extras](./docs/extra-demo.gif)
+
+Settings:
+
+![Settings](./docs/settings.png)

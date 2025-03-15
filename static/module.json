@@ -1,14 +1,14 @@
 {
     "id": "fate-core-unleashed",
     "title": "Fate Core Unleashed",
-    "description": "A FoundryVTT template module using typescript and vite",
+    "description": "A FoundryVTT module that adds additional features to the FateX system",
     "version": "1.0.0",
     "compatibility": {
         "minimum": 12,
         "verified": 12,
         "maximum": 12
     },
-    "esmodules": ["vendor.mjs", "fate-core-unleashed.mjs"],
+    "esmodules": ["fate-core-unleashed.mjs"],
     "scripts": [],
     "styles": ["styles/fate-core-unleashed.css"],
     "packs": [],
@@ -19,7 +19,7 @@
                 "id": "fatex",
                 "type": "system",
                 "compatibility": {
-                    "verified": "1.4.1"
+                    "verified": "1.4.2"
                 }
             }
         ],

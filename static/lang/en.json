@@ -7,8 +7,16 @@
         },
 
         "Ok": "OK",
-        "StaminaUsed": "{actor} has used their last bit of stamina. Take 1 stress from Stamina use!",
-        "StaminaNoStamina": "{actor} has no stamina. Stamina needs to be reset, a point reduced, and 1 stress taken.",
+
+        "StaminaUsed": "{actor} has used 1 point of stamina.",
+        "LastStaminaTitle": "Last Stamina",
+        "LastStaminaUsed": "{actor} has used their last stamina. Take 1 stress from Stamina use!",
+        "NoStamina": "{actor} has no stamina. Stamina needs to be reset, a point reduced, and 1 stress taken.",
+
+        "FatePointUsed": "{actor} has used a fate point.",
+        "LastFatePointTitle": "Last Fate Point",
+        "LastFatePointUsed": "{actor} has used their last fate point.",
+        "NoFatePoints": "{actor} has no fate points! This roll modification is invalid.",
 
         "Settings": {
             "EnableStamina": {

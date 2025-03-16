@@ -62,10 +62,12 @@ async function sendMessageToChat(message: string): Promise<void> {
         .filter((user) => user.isGM)
         .map((user) => user.id);
 
+    const uniqueGmUsers = [...new Set([...gmUsers, game.userId])];
+
     await ChatMessage.create({
         author: game.userId,
         content: `<p>${message}</p>`,
-        whisper: [...gmUsers, game.userId],
+        whisper: uniqueGmUsers,
     });
 }
 

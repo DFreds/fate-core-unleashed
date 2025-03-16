@@ -16,16 +16,57 @@ const FateXRollMagic: Listener = {
                 return;
             }
 
-            if (currentStaminaValue <= 0) {
-                ui.notifications.warn("You don't have any stamina left!");
-                return;
-            }
+            const newStaminaValue = currentStaminaValue - 1;
 
             await actor.update({
-                "system.stamina.current": (currentStaminaValue - 1).toString(),
+                "system.stamina.current": newStaminaValue.toString(),
             });
+
+            if (newStaminaValue === 0) {
+                const message = game.i18n.format(
+                    EN_JSON.FateCoreUnleashed.StaminaUsed,
+                    {
+                        actor: actor.name,
+                    },
+                );
+
+                displayDialog(message);
+                await sendMessageToChat(message);
+            } else if (newStaminaValue < 0) {
+                const message = game.i18n.format(
+                    EN_JSON.FateCoreUnleashed.StaminaNoStamina,
+                    {
+                        actor: actor.name,
+                    },
+                );
+
+                ui.notifications.error(message);
+                await sendMessageToChat(message);
+            }
         });
     },
 };
+
+function displayDialog(message: string): void {
+    const dialog = new Dialog({
+        title: EN_JSON.FateCoreUnleashed.Stamina,
+        content: message,
+        buttons: { ok: { label: EN_JSON.FateCoreUnleashed.Ok } },
+    });
+
+    dialog.render(true);
+}
+
+async function sendMessageToChat(message: string): Promise<void> {
+    const gmUsers = game.users
+        .filter((user) => user.isGM)
+        .map((user) => user.id);
+
+    await ChatMessage.create({
+        author: game.userId,
+        content: `<p>${message}</p>`,
+        whisper: [...gmUsers, game.userId],
+    });
+}
 
 export { FateXRollMagic };

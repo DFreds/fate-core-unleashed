@@ -5,6 +5,11 @@
             "RollInput": "Roll Input",
             "RollInputHelp": "Enter the roll input for the extra."
         },
+
+        "Ok": "OK",
+        "StaminaUsed": "{actor} has used their last bit of stamina. Take 1 stress from Stamina use!",
+        "StaminaNoStamina": "{actor} has no stamina. Stamina needs to be reset, a point reduced, and 1 stress taken.",
+
         "Settings": {
             "EnableStamina": {
                 "Name": "Enable Stamina",

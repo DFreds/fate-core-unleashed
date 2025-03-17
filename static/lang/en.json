@@ -19,6 +19,10 @@
         "NoFatePoints": "{actor} has no fate points! This roll modification is invalid.",
 
         "Settings": {
+            "AutomateFatePoints": {
+                "Name": "Automate Fate Points",
+                "Hint": "If enabled, fate points will be automatically decremented on a reroll or increase of a roll."
+            },
             "EnableStamina": {
                 "Name": "Enable Stamina",
                 "Hint": "If enabled, characters will have stamina added to their character sheet which auto decrements on a magic roll."

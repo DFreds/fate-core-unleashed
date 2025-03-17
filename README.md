@@ -40,8 +40,13 @@
 
 - Adds stamina management to character sheets
 - Automatically decrements stamina when performing configured "magic" rolls
+- Automatically decrement fate points when modifying a roll via a re-roll or increase
 - Adds configurable roll expressions to Extra items (e.g. "4dF+2")
 - Adds one-click roll button to Extra items for quick access
+
+Fate Point Automation:
+
+![Fate Point Automation](./docs/fate-point-demo.gif)
 
 Stamina:
 

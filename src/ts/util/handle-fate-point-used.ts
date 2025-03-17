@@ -2,10 +2,11 @@ import { displayDialog } from "./display-dialog.ts";
 import { createChatMessageToUserAndGms } from "./create-chat-message-to-user-and-gms.ts";
 
 async function handleFatePointUsed(roll: Roll): Promise<void> {
-    const actor = roll.options.actor as Actor<any>;
-    if (!actor) return;
+    const actorObject = roll.options.actor as Record<string, any>;
+    if (!actorObject) return;
 
-    if (!(actor instanceof Actor)) return;
+    const actor = game.actors.get(actorObject._id);
+    if (!actor) return;
 
     const system = actor.system as Record<string, any>;
     const fatePoints = system.fatepoints;

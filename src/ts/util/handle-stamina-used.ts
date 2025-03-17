@@ -24,7 +24,7 @@ async function handleStaminaUsed(roll: Roll): Promise<void> {
     });
 
     let message = "";
-    if (newStaminaValue >= 0) {
+    if (newStaminaValue > 0) {
         message = game.i18n.format(EN_JSON.FateCoreUnleashed.StaminaUsed, {
             actor: actor.name,
         });

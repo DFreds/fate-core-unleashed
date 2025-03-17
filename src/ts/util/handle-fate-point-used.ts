@@ -24,7 +24,7 @@ async function handleFatePointUsed(roll: Roll): Promise<void> {
     });
 
     let message = "";
-    if (newFatePointsValue >= 0) {
+    if (newFatePointsValue > 0) {
         message = game.i18n.format(EN_JSON.FateCoreUnleashed.FatePointUsed, {
             actor: actor.name,
         });

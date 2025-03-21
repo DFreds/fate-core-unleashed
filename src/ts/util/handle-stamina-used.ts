@@ -25,20 +25,20 @@ async function handleStaminaUsed(roll: Roll): Promise<void> {
 
     let message = "";
     if (newStaminaValue > 0) {
-        message = game.i18n.format(EN_JSON.FateCoreUnleashed.StaminaUsed, {
+        message = game.i18n.format("FateCoreUnleashed.StaminaUsed", {
             actor: actor.name,
         });
     } else if (newStaminaValue === 0) {
-        message = game.i18n.format(EN_JSON.FateCoreUnleashed.LastStaminaUsed, {
+        message = game.i18n.format("FateCoreUnleashed.LastStaminaUsed", {
             actor: actor.name,
         });
 
         displayDialog({
-            title: EN_JSON.FateCoreUnleashed.LastStaminaTitle,
+            title: "FateCoreUnleashed.LastStaminaTitle",
             content: message,
         });
     } else if (newStaminaValue < 0) {
-        message = game.i18n.format(EN_JSON.FateCoreUnleashed.NoStamina, {
+        message = game.i18n.format("FateCoreUnleashed.NoStamina", {
             actor: actor.name,
         });
 

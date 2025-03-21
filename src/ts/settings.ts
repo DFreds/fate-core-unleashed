@@ -8,8 +8,8 @@ class Settings {
 
     register(): void {
         game.settings.register(MODULE_ID, this.#AUTOMATE_FATE_POINTS, {
-            name: EN_JSON.FateCoreUnleashed.Settings.AutomateFatePoints.Name,
-            hint: EN_JSON.FateCoreUnleashed.Settings.AutomateFatePoints.Hint,
+            name: "FateCoreUnleashed.Settings.AutomateFatePoints.Name",
+            hint: "FateCoreUnleashed.Settings.AutomateFatePoints.Hint",
             scope: "world",
             config: true,
             default: true,
@@ -17,8 +17,8 @@ class Settings {
         });
 
         game.settings.register(MODULE_ID, this.#ENABLE_EXTRAS_ROLLING, {
-            name: EN_JSON.FateCoreUnleashed.Settings.EnableExtrasRolling.Name,
-            hint: EN_JSON.FateCoreUnleashed.Settings.EnableExtrasRolling.Hint,
+            name: "FateCoreUnleashed.Settings.EnableExtrasRolling.Name",
+            hint: "FateCoreUnleashed.Settings.EnableExtrasRolling.Hint",
             scope: "world",
             config: true,
             default: true,
@@ -26,8 +26,8 @@ class Settings {
         });
 
         game.settings.register(MODULE_ID, this.#ENABLE_STAMINA, {
-            name: EN_JSON.FateCoreUnleashed.Settings.EnableStamina.Name,
-            hint: EN_JSON.FateCoreUnleashed.Settings.EnableStamina.Hint,
+            name: "FateCoreUnleashed.Settings.EnableStamina.Name",
+            hint: "FateCoreUnleashed.Settings.EnableStamina.Hint",
             scope: "world",
             config: true,
             default: true,

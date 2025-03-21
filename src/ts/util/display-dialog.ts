@@ -8,7 +8,7 @@ function displayDialog({
     const dialog = new Dialog({
         title,
         content,
-        buttons: { ok: { label: EN_JSON.FateCoreUnleashed.Ok } },
+        buttons: { ok: { label: "FateCoreUnleashed.Ok" } },
     });
 
     dialog.render(true);

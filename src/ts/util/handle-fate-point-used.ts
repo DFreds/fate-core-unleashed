@@ -26,23 +26,20 @@ async function handleFatePointUsed(roll: Roll): Promise<void> {
 
     let message = "";
     if (newFatePointsValue > 0) {
-        message = game.i18n.format(EN_JSON.FateCoreUnleashed.FatePointUsed, {
+        message = game.i18n.format("FateCoreUnleashed.FatePointUsed", {
             actor: actor.name,
         });
     } else if (newFatePointsValue === 0) {
-        message = game.i18n.format(
-            EN_JSON.FateCoreUnleashed.LastFatePointUsed,
-            {
-                actor: actor.name,
-            },
-        );
+        message = game.i18n.format("FateCoreUnleashed.LastFatePointUsed", {
+            actor: actor.name,
+        });
 
         displayDialog({
-            title: EN_JSON.FateCoreUnleashed.LastFatePointTitle,
+            title: "FateCoreUnleashed.LastFatePointTitle",
             content: message,
         });
     } else if (newFatePointsValue < 0) {
-        message = game.i18n.format(EN_JSON.FateCoreUnleashed.NoFatePoints, {
+        message = game.i18n.format("FateCoreUnleashed.NoFatePoints", {
             actor: actor.name,
         });
 

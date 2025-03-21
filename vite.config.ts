@@ -8,9 +8,6 @@ import tsconfigPaths from "vite-tsconfig-paths";
 import { viteStaticCopy } from "vite-plugin-static-copy";
 
 const PACKAGE_ID = "modules/fate-core-unleashed";
-const EN_JSON = JSON.parse(
-    fs.readFileSync("./static/lang/en.json", { encoding: "utf-8" }),
-);
 
 const config = Vite.defineConfig(({ command, mode }): Vite.UserConfig => {
     const buildMode =
@@ -64,12 +61,10 @@ const config = Vite.defineConfig(({ command, mode }): Vite.UserConfig => {
     }
 
     return {
-        base:
-            command === "build" ? "./" : `/modules/fate-core-unleashed/`,
+        base: command === "build" ? "./" : `/modules/fate-core-unleashed/`,
         publicDir: "static",
         define: {
             BUILD_MODE: JSON.stringify(buildMode),
-            EN_JSON: JSON.stringify(EN_JSON),
         },
         esbuild: { keepNames: true },
         build: {
@@ -116,8 +111,7 @@ const config = Vite.defineConfig(({ command, mode }): Vite.UserConfig => {
             port: 30001,
             open: false,
             proxy: {
-                "^(?!/modules/fate-core-unleashed/)":
-                    "http://localhost:30000/",
+                "^(?!/modules/fate-core-unleashed/)": "http://localhost:30000/",
                 "/socket.io": {
                     target: "ws://localhost:30000",
                     ws: true,
@@ -158,10 +152,7 @@ function deleteLockFilePlugin(): Vite.Plugin {
         },
         writeBundle(outputOptions) {
             const outDir = outputOptions.dir ?? "";
-            const lockFile = path.resolve(
-                outDir,
-                "fate-core-unleashed.lock",
-            );
+            const lockFile = path.resolve(outDir, "fate-core-unleashed.lock");
             fs.rmSync(lockFile);
         },
     };

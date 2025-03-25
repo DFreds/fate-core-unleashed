@@ -35,8 +35,8 @@ async function handleFatePointUsed(roll: Roll): Promise<void> {
         });
 
         displayDialog({
-            title: "FateCoreUnleashed.LastFatePointTitle",
-            content: message,
+            title: game.i18n.localize("FateCoreUnleashed.LastFatePointTitle"),
+            content: `<p>${message}</p>`,
         });
     } else if (newFatePointsValue < 0) {
         message = game.i18n.format("FateCoreUnleashed.NoFatePoints", {

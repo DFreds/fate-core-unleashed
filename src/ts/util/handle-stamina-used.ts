@@ -34,8 +34,8 @@ async function handleStaminaUsed(roll: Roll): Promise<void> {
         });
 
         displayDialog({
-            title: "FateCoreUnleashed.LastStaminaTitle",
-            content: message,
+            title: game.i18n.localize("FateCoreUnleashed.LastStaminaTitle"),
+            content: `<p>${message}</p>`,
         });
     } else if (newStaminaValue < 0) {
         message = game.i18n.format("FateCoreUnleashed.NoStamina", {

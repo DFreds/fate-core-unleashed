@@ -21,7 +21,7 @@
         "Settings": {
             "AutomateFatePoints": {
                 "Name": "Automate Fate Points",
-                "Hint": "If enabled, fate points will be automatically decremented on a reroll or increase of a roll."
+                "Hint": "If enabled, fate points will be decremented on a reroll or increase of a roll when the shift key is held down."
             },
             "EnableStamina": {
                 "Name": "Enable Stamina",

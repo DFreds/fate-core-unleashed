@@ -1,3 +1,7 @@
+import { ActorSheet } from "@client/appv1/sheets/_module.mjs";
+
+const { renderTemplate } = foundry.applications.handlebars;
+
 async function addStaminaToHeader(
     $html: JQuery<HTMLElement>,
     actorSheet: ActorSheet<Actor>,

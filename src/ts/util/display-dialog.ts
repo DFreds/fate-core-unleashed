@@ -1,3 +1,5 @@
+import { Dialog } from "@client/appv1/api/_module.mjs";
+
 function displayDialog({
     title,
     content,

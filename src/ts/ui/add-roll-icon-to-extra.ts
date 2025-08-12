@@ -1,3 +1,5 @@
+import { ActorSheet } from "@client/appv1/sheets/_module.mjs";
+
 function addRollIconToExtra(
     $html: JQuery<HTMLElement>,
     actorSheet: ActorSheet<Actor>,

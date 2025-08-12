@@ -1,3 +1,7 @@
+import { ItemSheet } from "@client/appv1/sheets/_module.mjs";
+
+const { renderTemplate } = foundry.applications.handlebars;
+
 async function addRollInputToExtrasSheet(
     $html: JQuery<HTMLElement>,
     itemSheet: ItemSheet<Item, any>,

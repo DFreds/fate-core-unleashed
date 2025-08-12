@@ -1,6 +1,7 @@
 import { Listener } from "./index.ts";
 import { Settings } from "../settings.ts";
 import { addRollInputToExtrasSheet } from "../ui/add-roll-input-to-extras-sheet.ts";
+import { ItemSheet } from "@client/appv1/sheets/_module.mjs";
 
 const RenderExtraSheet: Listener = {
     listen(): void {

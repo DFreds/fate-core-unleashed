@@ -2,6 +2,7 @@ import { addStaminaToHeader } from "../ui/add-stamina-to-header.ts";
 import { addRollIconToExtra } from "../ui/add-roll-icon-to-extra.ts";
 import { Listener } from "./index.ts";
 import { Settings } from "../settings.ts";
+import { ActorSheet } from "@client/appv1/sheets/_module.mjs";
 
 const RenderCharacterSheet: Listener = {
     listen(): void {
